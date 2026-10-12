@@ -15,9 +15,9 @@ void firstFit(int blockSize[], int m, int processSize[], int n)
     j = punt;
     l = 0;
     while (l != 2){
-      if(j > m){
+      if(j > m){                        // cuando j pasa de los limites del arreglo, vuele a 0
         j = 0;
-        l += 1;
+        l += 1;                         // nuevo valor l para no repetir indefinidamente si no hay memoria
       }
       if(blockSize[j] >= processSize[i]) {
         allocation[i] = j;              // asigna bloque j al proceso i
